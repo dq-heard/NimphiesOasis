@@ -79,6 +79,7 @@
         <source src="./img/beach.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <div id="hiddenVideoContainer"></div>
       <div class="overlay"></div>
       <div class="container text-white text-center">
         <div class="row">
@@ -139,7 +140,7 @@
       </div>
     </section>
 
-    <!--about-->
+    <!--bg-1-->
     <section class="bg-cover" style="background-image: url(img/cover_1.jpg)">
       <div class="overlay"></div>
       <div class="container text-white text-center">
@@ -152,7 +153,7 @@
       </div>
     </section>
 
-    <!-- gallery -->
+    <!--gallery-->
     <section id="gallery">
       <div class="container-lg">
         <h3 class="display-6 mb-4 text-center" data-aos="fade-up">
@@ -211,7 +212,7 @@
       </div>
     </section>
 
-    <!--counters-->
+    <!--bg-2-->
     <section class="bg-cover" style="background-image: url(img/cover_2.jpg)">
       <div class="overlay"></div>
       <div class="container text-white text-center">
@@ -224,7 +225,7 @@
       </div>
     </section>
 
-    <!-- oasis -->
+    <!--oasis-->
     <section id="oasis" class="text-center">
       <div class="container-md">
         <div class="oasis-banner row align-items-center">
@@ -258,7 +259,7 @@
       </div>
     </section>
 
-    <!--counters-->
+    <!--bg-3-->
     <section class="bg-cover" style="background-image: url(img/cover_3.jpg)">
       <div class="overlay"></div>
       <div class="container text-white text-center">
@@ -364,14 +365,6 @@
       </div>
     </footer>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
-      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
     <!-- Close Mobile Nav on Click -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -389,6 +382,35 @@
         });
       });
     </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Create a video element to preload
+        const preloadVideo = document.createElement("video");
+        preloadVideo.src = "./img/beach.mp4";
+        preloadVideo.preload = "auto"; // Preload the video
+        preloadVideo.muted = true; // Mute the video to avoid autoplay restrictions
+        preloadVideo.autoplay = false; // Do not autoplay the video
+
+        // Load the video
+        preloadVideo.addEventListener("loadeddata", () => {
+          console.log("Video preloaded");
+        });
+
+        // Append the video to the hidden container
+        document
+          .getElementById("hiddenVideoContainer")
+          .appendChild(preloadVideo);
+      });
+    </script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/app.js"></script>

@@ -217,6 +217,15 @@ SECTION
 /*========================
 HERO
 =========================*/
+#hiddenVideoContainer {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .hero-section {
   position: relative;
   margin-top: -21px;
