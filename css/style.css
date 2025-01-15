@@ -73,8 +73,8 @@ section {
   position: relative;
 }
 *::-webkit-scrollbar {
-  height: 0.5em;
-  width: 1em;
+  height: 0.5rem;
+  width: 0.5rem;
 }
 *::-webkit-scrollbar-track {
   background-color: var(--bs-light);
