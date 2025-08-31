@@ -41,11 +41,9 @@ h5,
 h6,
 .heading {
   font-family: "Kaushan Script", cursive;
-  font-size: x-large;
   color: var(--coconut);
 }
-
-.hero h1 {
+h1 {
   font-size: 4rem;
   color: white;
 }
@@ -55,7 +53,12 @@ h2 {
 h3 {
   font-size: 2rem;
 }
-
+h4,
+h5,
+h6,
+.heading {
+  font-size: 1.5rem;
+}
 a {
   text-decoration: none;
   transition: all 0.4s ease;
@@ -101,9 +104,9 @@ img {
 /*========================
 SECTION
 =========================*/
-section:not(.hero-video) {
-  padding-top: 40px;
-  padding-bottom: 60px;
+section:not(.hero-video, #about) {
+  padding-top: 2.5rem;
+  padding-bottom: 3.75rem;
 }
 .overlay {
   position: absolute;
@@ -122,17 +125,17 @@ section:not(.hero-video) {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding: 80px 0;
+  padding: 5rem 0;
 }
 .bg-cover .heading {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   font-size: calc(1.425rem + 2.1vw);
 }
 .bg-cover .divider {
-  height: 4px;
-  width: 70px;
+  height: 0.25rem;
+  width: 4.5rem;
   background: linear-gradient(to right, var(--bs-light), var(--sand));
-  margin: 16px auto;
+  margin: 1rem auto;
 }
 
 /*========================
@@ -171,8 +174,8 @@ HERO
 ABOUT
 =========================*/
 #about {
-  margin-top: -4rem;
   max-height: fit-content;
+  padding-bottom: 1rem;
 }
 .img-block {
   background-image: url(../media/about/splash.png);
@@ -326,11 +329,12 @@ CAROUSEL
 CONTACT
 =========================*/
 .section-intro {
-  max-width: 720px;
+  max-width: 45rem;
   margin: 0 auto;
 }
 .sub-intro {
-  max-width: 405px;
+  max-width: 25rem;
+  margin: 0 auto 1rem;
 }
 .map-container {
   position: relative;
@@ -355,10 +359,9 @@ MEDIA QUERIES
 }
 
 @media screen and (min-width: 576px) {
-  .hero h1 {
+  h1 {
     font-size: 5rem;
   }
-
   h2 {
     font-size: 4rem;
   }
@@ -369,7 +372,8 @@ MEDIA QUERIES
 
 @media screen and (min-width: 768px) {
   #about {
-    max-height: 475px;
+    max-height: 26.5rem;
+    padding-bottom: 0;
   }
 
   .img-block {
@@ -409,30 +413,32 @@ MEDIA QUERIES
 
 @media screen and (min-width: 992px) {
   #about {
-    max-height: 550px;
+    max-height: 31.25rem;
   }
 
   .scroll-banner {
     display: block;
   }
 
-  .hero h1 {
+  h1 {
     font-size: 8rem;
   }
-
   h2 {
     font-size: 5rem;
   }
-
   h3 {
     font-size: 4rem;
+  }
+
+  .sub-intro {
+    margin: 0 0 1rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  section:not(.hero-video) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+  section:not(.hero-video, #about) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .p2 {
@@ -440,7 +446,7 @@ MEDIA QUERIES
   }
 
   #about {
-    max-height: 800px;
+    max-height: 37.5rem;
   }
 
   .scroll-banner {
@@ -449,12 +455,27 @@ MEDIA QUERIES
 }
 
 @media screen and (min-width: 1400px) {
+  #about {
+    max-height: 43.75rem;
+  }
+
   .scroll-banner {
     display: block;
   }
 
   .full-logo {
     width: 100%;
+  }
+
+  .sub-intro {
+    max-width: 31.25rem;
+  }
+
+  .map-container {
+    height: 440px;
+  }
+  .map-container iframe {
+    height: 500px;
   }
 }
 
