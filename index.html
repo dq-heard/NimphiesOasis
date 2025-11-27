@@ -21,6 +21,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="logo.png" type="image/x-icon" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "19:00",
+        "timeZone": "America/New_York"
+      }
+    </script>
   </head>
   <body>
     <!-- Navigation -->
@@ -484,7 +495,12 @@
                 class="d-flex justify-content-center justify-content-md-start"
               >
                 <h4>Hours: &nbsp;</h4>
-                <p>Tuesday - Saturday<br />9:00 AM - 7:00 PM</p>
+                <p>
+                  Tuesday - Saturday<br /><time datetime="09:00-05:00"
+                    >9:00 AM</time
+                  >
+                  - <time datetime="19:00-05:00">7:00 PM</time>
+                </p>
               </div>
               <div
                 class="d-flex justify-content-center justify-content-md-start"
