@@ -25,11 +25,36 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "19:00",
-        "timeZone": "America/New_York"
+        "@type": "LiquorStore",
+        "name": "Nimphie's Oasis Wine & Liquor",
+        "url": "https://nimphiesoasis.com/",
+        "image": "https://nimphiesoasis.com/media/logo/full-logo.webp",
+        "telephone": "+1-803-445-1825",
+        "email": "nimphiesoasis@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7834 Garners Ferry Rd",
+          "addressLocality": "Columbia",
+          "addressRegion": "SC",
+          "postalCode": "29209",
+          "addressCountry": "US"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/p/Nimphies-Oasis-Wine-Liquor-61565185206278/",
+          "https://www.yelp.com/biz/nimphie-s-oasis-wine-and-liquor-no-title"
+        ]
       }
     </script>
   </head>
@@ -52,17 +77,17 @@
             href="https://www.facebook.com/p/Nimphies-Oasis-Wine-Liquor-61565185206278/"
             class="text-white me-4"
             target="_blank"
-            aria-label="Nimphie’s Oasis Facebook link"
+            aria-label="Nimphie's Oasis Facebook link"
           >
-            <i class="fab fa-facebook-f fa-lg"></i>
+            <i class="fab fa-facebook-f fa-lg" aria-hidden="true"></i>
           </a>
           <a
             href="https://www.yelp.com/biz/nimphie-s-oasis-wine-and-liquor-no-title"
             class="text-white"
             target="_blank"
-            aria-label="Nimphie’s Oasis Yelp link"
+            aria-label="Nimphie's Oasis Yelp link"
           >
-            <i class="fab fa-yelp fa-lg"></i>
+            <i class="fab fa-yelp fa-lg" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -73,7 +98,7 @@
       <section class="hero-video position-relative">
         <!-- Video Background -->
         <video
-          autoplay
+          preload="none"
           muted
           loop
           playsinline
@@ -82,7 +107,6 @@
           style="z-index: 0"
           aria-hidden="true"
         >
-          <source src="media/hero/beach.webm" type="video/webm" />
           <source src="media/hero/beach.mp4" type="video/mp4" />
         </video>
 
@@ -90,10 +114,9 @@
         <div
           class="position-absolute w-100 h-100 top-0 start-0"
           style="
-            background: radial-gradient(
-              circle at center,
-              rgba(0, 0, 0, 0.3) 0%,
-              rgba(0, 0, 0, 0.6) 100%
+            background: linear-gradient(
+              rgba(0, 0, 0, 0.45),
+              rgba(0, 0, 0, 0.45)
             );
             z-index: 1;
           "
@@ -105,8 +128,8 @@
           class="hero container text-center text-white d-flex flex-column justify-content-center align-items-center vh-100"
           style="z-index: 2; position: relative"
         >
-          <p>Welcome to Nimphie's Oasis</p>
-          <h1>Sip Back and Relax</h1>
+          <div>Sip Back and Relax</div>
+          <h1>Welcome to Nimphie's Oasis</h1>
         </div>
 
         <!-- Wave Divider -->
@@ -140,6 +163,15 @@
             ></path>
           </svg>
         </div>
+
+        <!-- Video Controls -->
+        <button
+          type="button"
+          class="video-toggle"
+          aria-label="Pause background video"
+        >
+          <i class="fas fa-pause" aria-hidden="true"></i>
+        </button>
       </section>
 
       <!-- About Section -->
@@ -151,7 +183,7 @@
                 <img
                   src="media/about/store.webp"
                   class="image"
-                  alt=" A deep point-of-view photo of the store as you walk through the entrance."
+                  alt="A deep point-of-view photo of the store as you walk through the entrance."
                   loading="lazy"
                 />
               </figure>
@@ -160,7 +192,7 @@
             <div class="text-block col-12 col-md-6 text-center text-md-start">
               <h2 class="mb-3 mb-xl-4">About Us</h2>
               <p class="mb-4">
-                Nimphie’s Oasis Wine & Liquor is a family-owned business with
+                Nimphie's Oasis Wine & Liquor is a family-owned business with
                 proud military roots. We hang our hats on excellent customer
                 service and supplying you with seaside vibes for every occasion.
                 Unwind, indulge, and let the spirits move you.
@@ -200,11 +232,7 @@
               style="z-index: 2"
               data-aos="fade-up"
             >
-              <div
-                role="heading"
-                aria-level="5"
-                class="heading display-5 text-white"
-              >
+              <div class="heading display-5 text-white">
                 Tropical tastes, Columbia-based.
               </div>
               <div class="divider"></div>
@@ -301,11 +329,7 @@
               style="z-index: 2"
               data-aos="fade-up"
             >
-              <div
-                role="heading"
-                aria-level="5"
-                class="heading display-5 text-white"
-              >
+              <div class="heading display-5 text-white">
                 Island Spirits, Urban Oasis.
               </div>
               <div class="divider"></div>
@@ -325,7 +349,7 @@
                 land of departure. For all of your adult beverage needs,
                 Nimphie's Oasis is the first & only choice to make. When people
                 ask who helped you get the party started, make sure you say
-                Nimphie’s Oasis Wine & Liquor!
+                Nimphie's Oasis Wine & Liquor!
               </p>
             </div>
             <div class="mb-4 mb-xxl-0 col-xxl-6 justify-content-around">
@@ -345,43 +369,48 @@
             role="region"
             aria-label="Image carousel"
           >
-            <div class="carousel-track" role="group" tabindex="0">
-              <div class="carousel-slide img-flash" role="img">
+            <div
+              class="carousel-track"
+              aria-label="Nimphie's Oasis store interior"
+              role="group"
+              tabindex="0"
+            >
+              <div class="carousel-slide img-flash">
                 <img
                   src="media/carousel/carousel_0.webp"
                   alt="A section of ready-to-drink selections featuring brands like Jose Cuervo & 1800."
                   loading="lazy"
                 />
               </div>
-              <div class="carousel-slide img-flash" role="img">
+              <div class="carousel-slide img-flash">
                 <img
                   src="media/carousel/carousel_1.webp"
                   alt="A view of our store shelves, including Paul Masson, Smirnoff, and New Amsterdam."
                   loading="lazy"
                 />
               </div>
-              <div class="carousel-slide landscape img-flash" role="img">
+              <div class="carousel-slide landscape img-flash">
                 <img
                   src="media/carousel/carousel_2.webp"
                   alt="Inside our store, shelves filled with vodka on the left and tequila on the right."
                   loading="lazy"
                 />
               </div>
-              <div class="carousel-slide img-flash" role="img">
+              <div class="carousel-slide img-flash">
                 <img
                   src="media/carousel/carousel_3.webp"
                   alt="A shelf stocked with cocktail mixes for your adult beverage needs."
                   loading="lazy"
                 />
               </div>
-              <div class="carousel-slide img-flash" role="img">
+              <div class="carousel-slide img-flash">
                 <img
                   src="media/carousel/carousel_4.webp"
                   alt="A neatly arranged display of Crown Royal whiskey with a neon sign at the top."
                   loading="lazy"
                 />
               </div>
-              <div class="carousel-slide img-flash" role="img">
+              <div class="carousel-slide img-flash">
                 <img
                   src="media/carousel/carousel_5.webp"
                   alt="A shelf containing whiskey and bourbon brands like Jameson, Jim Beam, Fireball, & Evan Williams."
@@ -430,11 +459,7 @@
               style="z-index: 2"
               data-aos="fade-up"
             >
-              <div
-                role="heading"
-                aria-level="5"
-                class="heading display-5 text-white"
-              >
+              <div class="heading display-5 text-white">
                 A Getaway in Every Glass
               </div>
               <div class="divider"></div>
@@ -450,7 +475,7 @@
           <div class="text-center mb-2">
             <h2>Message in a Bottle</h2>
             <p class="section-intro py-3">
-              Whether it’s a whisper of curiosity, a wave of inquiry, or a sea
+              Whether it's a whisper of curiosity, a wave of inquiry, or a sea
               of suggestions, we are here to listen and respond. Your input
               helps guide us toward providing better service and achieving
               tranquility with our customers.
@@ -471,7 +496,7 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-                  title="storeMapLocation"
+                  title="Map showing Nimphie's Oasis location"
                 >
                 </iframe>
               </div>
@@ -485,37 +510,45 @@
                 brings us closer to you. Let there never be any trouble in
                 paradise.
               </p>
-              <div
-                class="d-flex justify-content-center justify-content-md-start"
-              >
-                <h4>Address: &nbsp;</h4>
-                <p>7834 Garners Ferry Rd<br />Columbia, SC 29209</p>
-              </div>
-              <div
-                class="d-flex justify-content-center justify-content-md-start"
-              >
-                <h4>Hours: &nbsp;</h4>
-                <p>
-                  Tuesday - Saturday<br /><time datetime="09:00-05:00"
-                    >9:00 AM</time
-                  >
-                  - <time datetime="19:00-05:00">7:00 PM</time>
-                </p>
-              </div>
-              <div
-                class="d-flex justify-content-center justify-content-md-start"
-              >
-                <h4>Email: &nbsp;</h4>
-                <a href="mailto:nimphiesoasis@gmail.com"
-                  >nimphiesoasis@gmail.com</a
+              <dl class="contact-list">
+                <div
+                  class="d-flex justify-content-center justify-content-md-start"
                 >
-              </div>
-              <div
-                class="d-flex justify-content-center justify-content-md-start"
-              >
-                <h4>Phone: &nbsp;</h4>
-                <a href="tel:18034451825" target="_self"> (803) 445-1825 </a>
-              </div>
+                  <dt>Address:&nbsp;</dt>
+                  <dd>7834 Garners Ferry Rd<br />Columbia, SC 29209</dd>
+                </div>
+                <div
+                  class="d-flex justify-content-center justify-content-md-start"
+                >
+                  <dt>Hours:&nbsp;</dt>
+                  <dd>
+                    Tuesday - Saturday<br /><time datetime="09:00"
+                      >9:00 AM</time
+                    >
+                    - <time datetime="19:00">7:00 PM</time>
+                  </dd>
+                </div>
+                <div
+                  class="d-flex justify-content-center justify-content-md-start"
+                >
+                  <dt>E-mail:&nbsp;</dt>
+                  <dd>
+                    <a href="mailto:nimphiesoasis@gmail.com"
+                      >nimphiesoasis@gmail.com</a
+                    >
+                  </dd>
+                </div>
+                <div
+                  class="d-flex justify-content-center justify-content-md-start"
+                >
+                  <dt>Phone:&nbsp;</dt>
+                  <dd>
+                    <a href="tel:18034451825" target="_self">
+                      (803) 445-1825
+                    </a>
+                  </dd>
+                </div>
+              </dl>
             </div>
           </div>
         </div>
@@ -534,7 +567,9 @@
           <div class="col-md-5 text-end">
             <p>
               Designed by
-              <a href="https://dqheard.com/?utm_source=oasis">D. Heard</a>
+              <a href="https://cedareaststudios.com/?utm_source=oasis"
+                >D. Heard</a
+              >
             </p>
           </div>
         </div>
@@ -544,7 +579,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script src="js/carousel.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
